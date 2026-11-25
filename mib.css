@@ -1,0 +1,41 @@
+:root {
+  color-scheme: light;
+  --paper: #f5f7fb;
+  --surface: #fff;
+  --ink: #192039;
+  --muted: #475570;
+  --line: #d8e0ee;
+  --accent: #343c9e;
+  --focus: #544ad4;
+  font: 100%/1.65 system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--ink); background: var(--paper); }
+a { color: var(--accent); text-underline-offset: .18em; overflow-wrap: anywhere; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
+.skip { position: absolute; top: .5rem; left: .5rem; padding: .5rem 1rem; background: var(--surface); }
+.skip:not(:focus) { clip-path: inset(50%); }
+.site-header { padding: 1.15rem max(1.25rem, calc((100% - 70rem) / 2)); border-bottom: 1px solid var(--line); }
+.wordmark { color: var(--ink); font-weight: 750; text-decoration: none; }
+.directory { max-width: 70rem; margin: auto; padding: clamp(2.5rem, 8vw, 6rem) 1.25rem 3rem; }
+.directory h1 { margin: 0 0 .6em; font-size: clamp(3rem, 9vw, 6.5rem); letter-spacing: -.065em; line-height: .98; }
+.app-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; }
+.app { padding: 1.4rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--surface); }
+.app h2 { margin: 0 0 .65rem; font-size: 1.3rem; }
+.links { padding: 0; margin: 0; list-style: none; }
+.links a { display: inline-block; padding: .2rem 0; }
+
+.legal { max-width: 51rem; margin: auto; padding: clamp(2rem, 6vw, 4rem) 1.25rem 4rem; }
+.legal h1 { margin: 0 0 .65em; font-size: clamp(2rem, 5.75vw, 3.35rem); letter-spacing: -.045em; line-height: 1.1; }
+.legal h2 { margin: 2.2rem 0 .55rem; line-height: 1.25; font-size: 1.3rem; scroll-margin-block-start: 1rem; }
+.legal p, .legal li { max-width: 72ch; }
+.legal code { overflow-wrap: anywhere; }
+.legal ul { padding-inline-start: 1.4rem; }
+.meta, .notice, .contents { background: var(--surface); padding: .9rem 1.1rem; border: 1px solid var(--line); border-radius: .75rem; }
+.notice { border-inline-start: 4px solid var(--accent); }
+.contents { margin: 1.5rem 0; }
+.contents summary { cursor: pointer; font-weight: 650; }
+.contents ul { margin-bottom: 0; }
+nav, footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); }
+.legal .contents { padding-top: .9rem; }
